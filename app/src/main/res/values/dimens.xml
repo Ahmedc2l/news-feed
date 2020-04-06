@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="article_title_text_size">20sp</dimen>
+    <dimen name="article_content_text_size">16sp</dimen>
+    <dimen name="artilce_image_height">196dp</dimen>
+    <dimen name="guideline_margin">16dp</dimen>
+</resources>

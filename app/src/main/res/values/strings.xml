@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">News Feed</string>
+    <string name="explore">Explore</string>
+    <string name="e_magazine">E-Magazine</string>
+    <string name="wish_list">Wish List</string>
+    <string name="gallery">Gallery</string>
+    <string name="live_chat">Live Chat</string>
+
+    <string name="link_development">LINK DEVELOPMENT</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="article_image">Article image</string>
+    <string name="user_avatar">User avatar</string>
+    <string name="welcome">Welcome</string>
+    <string name="tony_roshdy">Tony Roshdy</string>
+    <string name="open_website">Open Website</string>
+    <string name="search">Search</string>
+    <string name="drawer_selected_item">Drawer selected item</string>
+    <string name="drawer_item_icon">Drawer item icon</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>@string/explore</item>
+        <item>@string/live_chat</item>
+        <item>@string/gallery</item>
+        <item>@string/wish_list</item>
+        <item>@string/e_magazine</item>
+    </string-array>
+</resources>

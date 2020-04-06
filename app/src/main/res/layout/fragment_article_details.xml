@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ArticleDetailsFragment"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_articleImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/artilce_image_height"
+            android:layout_marginStart="@dimen/guideline_margin"
+            android:layout_marginTop="@dimen/guideline_margin"
+            android:layout_marginEnd="@dimen/guideline_margin"
+            android:src="@drawable/tnw"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/article_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_articleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="end"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/article_content_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_articleImage"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_articleImage"
+            tools:text="April 3, 2017" />
+
+        <TextView
+            android:id="@+id/textView_articleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingStart="@dimen/guideline_margin"
+            android:paddingEnd="@dimen/guideline_margin"
+            android:textSize="@dimen/article_title_text_size"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_articleImage"
+            app:layout_constraintStart_toStartOf="@+id/imageView_articleImage"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_articleImage"
+            tools:text="Supermassive black holes: How did they grow so fast?" />
+
+        <TextView
+            android:id="@+id/textView_articleAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/article_content_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_articleImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView_articleImage"
+            app:layout_constraintTop_toBottomOf="@+id/textView_articleTitle"
+            tools:text="By The Cosmic Companion" />
+
+        <TextView
+            android:id="@+id/textView_articleDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/article_content_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_articleImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView_articleImage"
+            app:layout_constraintTop_toBottomOf="@+id/textView_articleAuthor"
+            tools:text="By The Cosmic Companion" />
+
+        <Button
+            android:id="@+id/button_openWebsite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/open_website"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_articleImage"
+            app:layout_constraintStart_toStartOf="@+id/imageView_articleImage"
+            app:layout_constraintTop_toBottomOf="@+id/textView_articleDescription"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
