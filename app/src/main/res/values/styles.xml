@@ -16,7 +16,7 @@
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="android:activatedBackgroundIndicator">@drawable/item_selected</item>
 
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">@string/default_font</item>
     </style>
 
     <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">

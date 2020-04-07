@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.ahmed.newsfeed.R;
 import com.ahmed.newsfeed.adapters.ArticlesAdapter;
@@ -20,12 +21,14 @@ import com.ahmed.newsfeed.databinding.FragmentHomeBinding;
 import com.ahmed.newsfeed.models.Article;
 import com.ahmed.newsfeed.models.NewsData;
 import com.ahmed.newsfeed.network.APIUtils;
+import com.ahmed.newsfeed.network.ErrorUtils;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.Response;
 
 
 public class HomeFragment extends Fragment {
@@ -65,21 +68,25 @@ public class HomeFragment extends Fragment {
         binding.recyclerViewArticles.setHasFixedSize(true);
         binding.recyclerViewArticles.setAdapter(articlesAdapter);
 
-        Observable<NewsData> articlesFromNextWeb = APIUtils.getAPIService().getArticlesFromNextWeb();
-        Observable<NewsData> articlesFromAssociatedPress = APIUtils.getAPIService().getArticlesFromAssociatedPress();
-
+        Observable<Response<NewsData>> articlesFromNextWeb = APIUtils.getAPIService().getArticlesFromNextWeb();
+        Observable<Response<NewsData>> articlesFromAssociatedPress = APIUtils.getAPIService().getArticlesFromAssociatedPress();
         Observable.merge(articlesFromNextWeb, articlesFromAssociatedPress)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<NewsData>() {
+                .subscribe(new Observer<Response<NewsData>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
 
                     }
 
                     @Override
-                    public void onNext(NewsData newsData) {
-                        articlesAdapter.setArticleList(newsData.getArticles());
+                    public void onNext(Response<NewsData> newsDataResponse) {
+                        if(newsDataResponse.isSuccessful()){
+                            NewsData newsData = newsDataResponse.body();
+                            if(newsData != null)
+                                articlesAdapter.setArticleList(newsData.getArticles());
+                        }else
+                            Toast.makeText(activity, ErrorUtils.parseError(newsDataResponse).toString(), Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -91,6 +98,7 @@ public class HomeFragment extends Fragment {
                     public void onComplete() {
                         Log.i(TAG, "onComplete: loading completed :)");
                     }
+
                 });
     }
 }

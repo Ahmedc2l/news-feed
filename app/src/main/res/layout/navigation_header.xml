@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingBottom="32dp">
+    android:paddingBottom="64dp">
 
     <ImageView
         android:id="@+id/imageView_userAvatar"
