@@ -10,6 +10,7 @@ News Feed is a basic android application implementing:
   - Parcelable
   - ViewBinding
   - Retrofit and OkHttp
+  - Network Error handling
   - Combining RxJava Observables
   - Callbacks with Generics
   - Glide
