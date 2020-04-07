@@ -14,7 +14,13 @@ News Feed is a basic android application implementing:
   - Combining RxJava Observables
   - Callbacks with Generics
   - Glide
+  - DateTime formating
 
+## Screenshots
+
+Home            |  Drawer          |  Article
+:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/Ahmedc2l/news-feed/blob/master/Screenshot_1586253377.png)  |  ![](https://github.com/Ahmedc2l/news-feed/blob/master/Screenshot_1586253386.png) | ![](https://github.com/Ahmedc2l/news-feed/blob/master/Screenshot_1586253402.png)
 
 
 ## Libraries
