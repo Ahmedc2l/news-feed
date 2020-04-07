@@ -1,16 +1,16 @@
 # News Feed
 
 
-News Feed is a basic android application implementing:
+News Feed is a very basic android application implementing:
 
   - RecyclerViews and ViewHolders :zap:
   - DrawerLayout
   - Navigation components :ok_hand:
-  - Safe args 
+  - Safe args :running:
   - Parcelable
   - ViewBinding :heart_eyes:
   - Retrofit and OkHttp
-  - Network Error handling
+  - Network Errors handling
   - Combining RxJava Observables :clap:
   - Callbacks with Generics :fire:
   - Glide
