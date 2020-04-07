@@ -32,7 +32,7 @@ Home            |  Drawer          |  Article
 | ------ | ------ |
 | Glide | https://github.com/bumptech/glide/blob/master/README.md |
 | RxJava | https://github.com/ReactiveX/RxAndroid |
-| Retrofile | https://github.com/square/retrofit |
+| Retrofit | https://github.com/square/retrofit |
 
 License
 ----
