@@ -1,7 +1,7 @@
 # News Feed
 
 
-News Feed is a very basic android application implementing:
+News Feed is a very straightforward basic android application showcasing:
 
   - RecyclerViews and ViewHolders :zap:
   - DrawerLayout :star:
