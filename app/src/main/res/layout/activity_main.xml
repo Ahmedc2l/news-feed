@@ -40,6 +40,7 @@
         android:layout_gravity="start"
         android:clipToPadding="false"
         android:alpha="0.97"
+        app:itemBackground="@drawable/drawer_selected_item"
         app:menu="@menu/navigation_menu"
         style="@style/Theme.MaterialComponents"
         />
